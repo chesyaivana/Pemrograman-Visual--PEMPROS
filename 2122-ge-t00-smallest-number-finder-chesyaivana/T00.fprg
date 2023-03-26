@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chesy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-08 03:39:44 PM"/>
+        <attribute name="created" value="Y2hlc3k7TEFQVE9QLUZGM1NDU0hGOzIwMjEtMDgtMzE7MDI6MTQ6MDIgUE07Mjg4NQ=="/>
+        <attribute name="edited" value="Y2hlc3k7TEFQVE9QLUZGM1NDU0hGOzIwMjEtMDktMDg7MDM6Mzk6NDQgUE07MzszMDE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, z" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <input variable="z"/>
+            <if expression="x &lt; y">
+                <then>
+                    <assign variable="s" expression="x"/>
+                </then>
+                <else>
+                    <assign variable="s" expression="y"/>
+                </else>
+            </if>
+            <if expression="z &lt; s">
+                <then>
+                    <assign variable="s" expression="z"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

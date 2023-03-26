@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chesy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-11 04:07:10 PM"/>
+        <attribute name="created" value="Y2hlc3k7TEFQVE9QLUZGM1NDU0hGOzIwMjEtMTAtMTE7MDE6MzU6NDEgUE07Mjg4MQ=="/>
+        <attribute name="edited" value="Y2hlc3k7TEFQVE9QLUZGM1NDU0hGOzIwMjEtMTAtMTE7MDQ6MDc6MTAgUE07MjsyOTg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN" type="String" array="False" size=""/>
+            <declare name="price, totaltransaksi" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="beli" type="Boolean" array="False" size=""/>
+            <assign variable="beli" expression="True"/>
+            <assign variable="totaltransaksi" expression="0"/>
+            <while expression="beli">
+                <input variable="ISBN"/>
+                <if expression="ISBN!=&quot;---&quot;">
+                    <then>
+                        <input variable="price"/>
+                        <input variable="quantity"/>
+                        <assign variable="totaltransaksi" expression="(price*quantity)+totaltransaksi"/>
+                    </then>
+                    <else>
+                        <assign variable="beli" expression="False"/>
+                        <output expression="tofixed(totaltransaksi,2)" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
